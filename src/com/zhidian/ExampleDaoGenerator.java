@@ -31,24 +31,18 @@ import de.greenrobot.daogenerator.ToMany;
 public class ExampleDaoGenerator {
 
     public static void main(String[] args) throws Exception {
-        Schema schema = new Schema(1, "com.youle.gamebox.ui.greendao");
+        Schema schema = new Schema(1, "com.engine.mnsfz.greendao");
         addEntity(schema);
 
 //        new DaoGenerator().generateAll(schema, "D:\\github\\greenDAO\\DaoExample\\src-gen");
-        new DaoGenerator().generateAll(schema, "..\\Youle\\src");
+        new DaoGenerator().generateAll(schema, "..\\mnsfz\\src\\main\\java");
     }
 
     private static void addEntity(Schema schema) {
-        Entity entity = schema.addEntity("RecommendGame");
-        entity.addLongProperty("appid").primaryKey();
-        entity.addStringProperty("name");
-        entity.addStringProperty("downloadurl") ;
-        entity.addStringProperty("imageurl") ;
-        entity.addBooleanProperty("isrecommend");
-
-        Entity jsonEntity = schema.addEntity("JsonEntry") ;
-        jsonEntity.addLongProperty("resouce").primaryKey() ;
-        jsonEntity.addStringProperty("json") ;
+        Entity entity = schema.addEntity("classfy");
+        entity.addStringProperty("title");
+        entity.addStringProperty("href").primaryKey() ;
+        entity.addStringProperty("src") ;
     }
 
 
