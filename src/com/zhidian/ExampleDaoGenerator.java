@@ -39,10 +39,16 @@ public class ExampleDaoGenerator {
     }
 
     private static void addEntity(Schema schema) {
-        Entity entity = schema.addEntity("classfy");
+        Entity entity = schema.addEntity("ImageBean");
         entity.addStringProperty("title");
         entity.addStringProperty("href").primaryKey() ;
         entity.addStringProperty("src") ;
+        entity.addLongProperty("time") ;
+
+        Entity model = schema.addEntity("ModelBean") ;
+        model.addStringProperty("title") ;
+        model.addStringProperty("src").primaryKey() ;
+        model.addLongProperty("time") ;
     }
 
 
