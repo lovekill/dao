@@ -43,12 +43,14 @@ public class ExampleDaoGenerator {
         entity.addStringProperty("title");
         entity.addStringProperty("href").primaryKey() ;
         entity.addStringProperty("src") ;
+        entity.addBooleanProperty("love") ;
         entity.addLongProperty("time") ;
 
         Entity model = schema.addEntity("ModelBean") ;
         model.addStringProperty("title") ;
         model.addStringProperty("src").primaryKey() ;
         model.addLongProperty("time") ;
+
     }
 
 
